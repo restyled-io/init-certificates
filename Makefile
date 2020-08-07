@@ -16,3 +16,5 @@ release: build
 	  restyled/init-certificates \
 	  restyled/init-certificates:v$(VERSION)
 	docker push restyled/init-certificates:v$(VERSION)
+	git tag -s -m "v$(VERSION)" "v$(VERSION)"
+	git push --tags
